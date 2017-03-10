@@ -1,12 +1,14 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="hello" v-html="message">
+    <h1>Fdsgsdfgdfg</h1>
+    <h2>{{ message }}</h2>
   </div>
 </template>
 
 <script>
 export default {
   name: 'test',
+  props: ['message'],
   data () {
     return {
       msg: 'Test LOLOLO'
