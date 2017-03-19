@@ -3,7 +3,7 @@
     <ctl-menu></ctl-menu>
 
     <main id="main">
-      <transition name="fade" mode="out-in">
+      <transition name="component-fade" mode="out-in">
         <router-view></router-view>
       </transition>
     </main>
@@ -11,7 +11,8 @@
 </template>
 
 <script>
-import Menu from '@/components/Menu'
+  import Menu from '@/components/Menu'
+
   export default {
     name: 'app',
     components: {
@@ -47,11 +48,10 @@ import Menu from '@/components/Menu'
     bottom 0
     right 0
     left 170px
-    padding: 30px
-  .fade-enter-active, .fade-leave-active {
-   transition: opacity .2s
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active для <2.1.8 */ {
+    padding 30px
+
+  .component-fade-enter-active, .component-fade-leave-active
+    transition opacity .2s ease
+  .component-fade-enter, .component-fade-leave-to 
     opacity: 0
-  }
 </style>
